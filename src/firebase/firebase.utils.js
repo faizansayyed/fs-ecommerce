@@ -1,16 +1,18 @@
-import firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/auth";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
 
 const config = {
   apiKey: "AIzaSyBzOxWkkCHVvSq9StBo4ug2EoIqaU0ICVg",
   authDomain: "fsecommerce-db.firebaseapp.com",
+  databaseURL: "https://fsecommerce-db-default-rtdb.firebaseio.com",
   projectId: "fsecommerce-db",
   storageBucket: "fsecommerce-db.appspot.com",
   messagingSenderId: "337413854783",
   appId: "1:337413854783:web:7e0824b75dc8062dbb0a8a",
-  measurementId: "G-C8DYXBR6SQ",
+  measurementId: "G-C8DYXBR6SQ"
 };
+
 firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
